@@ -1,0 +1,231 @@
+<!--
+Name: Rachana Ramesh
+Student ID: 29905257 
+-->
+<!-- This code is to draw the stacked bar chart based on the gender and for different ethnic backgrounds. -->
+
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Gender-wise ASD Positive - Toddler</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+<!--    <link rel="stylesheet" type="text/css" href="styles.css">-->
+</head>
+<div class="title-holder">
+	<h1 class="title" align = "center" id="heading">Gender-wise classification on Ethnicity - Toddlers</h1>
+</div>
+
+<!-- Add 4 buttons -->
+<center>
+<a href='Pie%20-%20Adults.html' id = "nextPage"><span>Prev Page</span></a>
+<a href='stack_bar%20-%20Adults.html' id="adult"><span><b>ADULT DATA</b></span></a>
+<a href='Stack_bar%20-%20Toddler.html' id="toddler"><span><b>TODDLER DATA</b></span></a>
+<a href='PS%20-%20Adults.html' id = "nextPage"><span>Next Page</span></a>
+</center>
+
+<style>
+
+.axis .domain {
+  display: none;
+}
+
+body { 
+  margin:0;
+  position:fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  font-family: 'Open Sans', sans-serif;
+}
+    
+/*Style tags for Adult and toddler buttons*/
+#adult,#toddler {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #8488E1;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  padding: 16px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 10px;
+}
+    
+/*Style tags for headings*/
+#heading{
+    font-family: verdana;
+}
+
+/*Style tags for buttons*/
+a span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+a span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+a:hover span {
+  padding-right: 25px;
+}
+
+a:hover span:after {
+  opacity: 1;
+  right: 0;
+}    
+
+/*Style tags for next and previous page*/
+#nextPage {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: grey;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  padding: 16px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 10px;
+}
+</style>
+<body>
+<svg width="960" height="400"></svg>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script>
+
+var svg = d3.select("svg"),
+    margin = {top: 20, right: 20, bottom: 30, left: 40},
+    width = +svg.attr("width") - margin.left - margin.right,
+    height = +svg.attr("height") - margin.top - margin.bottom,
+    g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+var x = d3.scaleBand()
+    .rangeRound([0, width])
+    .paddingInner(0.25)
+    .align(0.1);
+
+var y = d3.scaleLinear()
+    .rangeRound([height, 0]);
+
+var z = d3.scaleOrdinal()
+    .range(['#6495ed','#ff8da1']);
+
+d3.csv("toddler_gender_ethnic.csv", function(d, i, columns) {
+  for (i = 1, t = 0; i < columns.length; ++i) t += d[columns[i]] = +d[columns[i]];
+  d.total = t;
+  return d;
+}, function(error, data) {
+  if (error) throw error;
+
+  var keys = data.columns.slice(1);
+
+  data.sort(function(a, b) { return b.total - a.total; });
+  x.domain(data.map(function(d) { return d.Ethnicity; }));
+  y.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
+  z.domain(keys);
+
+  var bars = g.append("g")
+    .selectAll("g")
+    .data(d3.stack().keys(keys)(data))
+    .enter().append("g")
+      .attr("fill", function(d) { return z(d.key); })
+    .selectAll("rect")
+    .data(function(d) { return d; })
+    .enter().append("rect")
+      .attr("x", function(d) { return x(d.data.Ethnicity); })
+      .attr("y", function(d) { return y(d[1]); })
+      .attr("height", function(d) { return y(d[0]) - y(d[1]); })
+      .attr("width", x.bandwidth())
+        .on("mouseover", function() { tooltip.style("display", null); })
+  .on("mouseout", function() { tooltip.style("display", "none"); })
+  .on("mousemove", function(d) {
+    var xPosition = d3.mouse(this)[0] + 10;
+    var yPosition = d3.mouse(this)[1] + 3;
+    tooltip.attr("transform", "translate(" + xPosition + "," + yPosition + ")");
+    tooltip.select("text").text(d[1] - d[0]);
+  });
+    
+  
+  g.append("g")
+      .attr("class", "axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x));
+
+  g.append("g")
+      .attr("class", "axis")
+      .call(d3.axisLeft(y).ticks(null, "s"))
+    .append("text")
+      .attr("x", 2)
+      .attr("y", y(y.ticks().pop()) + 0.5)
+      .attr("dy", "0.32em")
+      .attr("fill", "#000")
+      .attr("font-weight", "bold")
+      .attr("text-anchor", "start");
+//      .text("Incidents");
+
+  var legend = g.append("g")
+      .attr("font-family", "sans-serif")
+      .attr("font-size", "12px")
+      .attr("text-anchor", "end")
+    .selectAll("g")
+    .data(keys.slice().reverse())
+    .enter().append("g")
+      .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+  legend.append("rect")
+      .attr("x", width - 19)
+      .attr("width", 19)
+      .attr("height", 19)
+      .attr("fill", z);
+
+  legend.append("text")
+      .attr("x", width - 24)
+      .attr("y", 1.5)
+      .attr("dy", "1.2em")
+      .text(function(d) { return d; });
+});
+    
+    // Prep the tooltip bits, initial display is hidden
+var tooltip = svg.append("g")
+  .attr("class", "tooltip")
+  .style("display", "none");
+    
+tooltip.append("rect")
+  .attr("width", 30)
+  .attr("height", 20)
+  .attr("fill", "white")
+  .style("opacity", 0.5);
+
+tooltip.append("text")
+  .attr("x", 15)
+  .attr("dy", "1.2em")
+  .style("text-anchor", "middle")
+  .attr("font-size", "12px")
+  .attr("font-weight", "bold");
+
+</script>
+
+<div>
+<article>
+<h3 align="center" style="font-family:  verdana">Rate of Autism based on Gender</h3>
+<p align = "center"  style="font-size: 75%;font-family:  verdana"> The above graph represents the number of Male and Female detected with ASD in Toddlers. Of the total of 735 males 534 males have been detected with Autism. Whereas in females of total 319 records 194 females were detected with Autism.From the above graph we can infer in Toddler the number of male with Autism is 72% whereas the number of females with Autism is 60% which is comparatively less. 
+</p>
+<p align="left"> </p>
+</article>
+</div>
+
+</body>

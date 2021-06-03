@@ -1,0 +1,660 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20191.19.0417.1429                               -->
+<workbook original-version='18.1' source-build='2019.1.3 (20191.19.0417.1429)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Toddler Autism dataset July 201 (Autism_data - Toddler)' inline='true' name='federated.09gcf6j01u5cd6117koxp17kxi93' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Autism_data - Toddler' name='excel-direct.0hhwdkn1hk12md1h4tka003dk8fc'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='D:/MS Data Science/Sem 2/Data Vis - FIT5147/Data Exploration Project/Autism_data - Toddler.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.0hhwdkn1hk12md1h4tka003dk8fc' name='Toddler Autism dataset July 201' table='[&apos;Toddler Autism dataset July 201$&apos;]' type='table'>
+          <columns gridOrigin='A1:R1055:no:A1:R1055:0' header='yes' outcome='6'>
+            <column datatype='integer' name='Case_No' ordinal='0' />
+            <column datatype='integer' name='A1' ordinal='1' />
+            <column datatype='integer' name='A2' ordinal='2' />
+            <column datatype='integer' name='A3' ordinal='3' />
+            <column datatype='integer' name='A4' ordinal='4' />
+            <column datatype='integer' name='A5' ordinal='5' />
+            <column datatype='integer' name='A6' ordinal='6' />
+            <column datatype='integer' name='A7' ordinal='7' />
+            <column datatype='integer' name='A8' ordinal='8' />
+            <column datatype='integer' name='A9' ordinal='9' />
+            <column datatype='integer' name='A10' ordinal='10' />
+            <column datatype='integer' name='Age_Mons' ordinal='11' />
+            <column datatype='integer' name='Qchat-10-Score' ordinal='12' />
+            <column datatype='string' name='Sex' ordinal='13' />
+            <column datatype='string' name='Ethnicity' ordinal='14' />
+            <column datatype='string' name='Jaundice' ordinal='15' />
+            <column datatype='string' name='Family_mem_with_ASD' ordinal='16' />
+            <column datatype='string' name='Class/ASD Traits' ordinal='17' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Case_No</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Case_No]</local-name>
+            <parent-name>[Toddler Autism dataset July 201]</parent-name>
+            <remote-alias>Case_No</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>A1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[A1]</local-name>
+            <parent-name>[Toddler Autism dataset July 201]</parent-name>
+            <remote-alias>A1</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>A2</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[A2]</local-name>
+            <parent-name>[Toddler Autism dataset July 201]</parent-name>
+            <remote-alias>A2</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>A3</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[A3]</local-name>
+            <parent-name>[Toddler Autism dataset July 201]</parent-name>
+            <remote-alias>A3</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>A4</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[A4]</local-name>
+            <parent-name>[Toddler Autism dataset July 201]</parent-name>
+            <remote-alias>A4</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>A5</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[A5]</local-name>
+            <parent-name>[Toddler Autism dataset July 201]</parent-name>
+            <remote-alias>A5</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>A6</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[A6]</local-name>
+            <parent-name>[Toddler Autism dataset July 201]</parent-name>
+            <remote-alias>A6</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>A7</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[A7]</local-name>
+            <parent-name>[Toddler Autism dataset July 201]</parent-name>
+            <remote-alias>A7</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>A8</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[A8]</local-name>
+            <parent-name>[Toddler Autism dataset July 201]</parent-name>
+            <remote-alias>A8</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>A9</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[A9]</local-name>
+            <parent-name>[Toddler Autism dataset July 201]</parent-name>
+            <remote-alias>A9</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>A10</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[A10]</local-name>
+            <parent-name>[Toddler Autism dataset July 201]</parent-name>
+            <remote-alias>A10</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Age_Mons</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Age_Mons]</local-name>
+            <parent-name>[Toddler Autism dataset July 201]</parent-name>
+            <remote-alias>Age_Mons</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Qchat-10-Score</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Qchat-10-Score]</local-name>
+            <parent-name>[Toddler Autism dataset July 201]</parent-name>
+            <remote-alias>Qchat-10-Score</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sex</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Sex]</local-name>
+            <parent-name>[Toddler Autism dataset July 201]</parent-name>
+            <remote-alias>Sex</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Ethnicity</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Ethnicity]</local-name>
+            <parent-name>[Toddler Autism dataset July 201]</parent-name>
+            <remote-alias>Ethnicity</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Jaundice</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Jaundice]</local-name>
+            <parent-name>[Toddler Autism dataset July 201]</parent-name>
+            <remote-alias>Jaundice</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Family_mem_with_ASD</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Family_mem_with_ASD]</local-name>
+            <parent-name>[Toddler Autism dataset July 201]</parent-name>
+            <remote-alias>Family_mem_with_ASD</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Class/ASD Traits</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Class/ASD Traits]</local-name>
+            <parent-name>[Toddler Autism dataset July 201]</parent-name>
+            <remote-alias>Class/ASD Traits</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Toddler Autism dataset July 201]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:R1055:no:A1:R1055:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[Age Mons (group)]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[Age_Mons]' new-bin='true'>
+          <bin default-name='false' value='&quot;Less than 1 year&quot;'>
+            <value>12</value>
+          </bin>
+          <bin default-name='false' value='&quot;Less than 2 years&quot;'>
+            <value>13</value>
+            <value>14</value>
+            <value>15</value>
+            <value>16</value>
+            <value>17</value>
+            <value>18</value>
+            <value>19</value>
+            <value>20</value>
+            <value>21</value>
+            <value>22</value>
+            <value>23</value>
+            <value>24</value>
+          </bin>
+          <bin default-name='false' value='&quot;Less than 3 years&quot;'>
+            <value>25</value>
+            <value>26</value>
+            <value>27</value>
+            <value>28</value>
+            <value>29</value>
+            <value>30</value>
+            <value>31</value>
+            <value>32</value>
+            <value>33</value>
+            <value>34</value>
+            <value>35</value>
+            <value>36</value>
+          </bin>
+        </calculation>
+      </column>
+      <column caption='Age Mons' datatype='integer' name='[Age_Mons]' role='measure' type='quantitative' />
+      <column caption='Case No' datatype='integer' name='[Case_No]' role='measure' type='quantitative' />
+      <column datatype='string' name='[Class/ASD Traits]' role='dimension' type='nominal' />
+      <column caption='Family mem with ASD' datatype='string' name='[Family_mem_with_ASD]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column-instance column='[Class/ASD Traits]' derivation='None' name='[none:Class/ASD Traits:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.325726' measure-ordering='alphabetic' measure-percentage='0.674274' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Class/ASD Traits:nk]' type='palette'>
+            <map to='#b07aa1'>
+              <bucket>&quot;No&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Yes&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Australia&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Agewise categorisation for ASD - Toddlers'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Toddler Autism dataset July 201 (Autism_data - Toddler)' name='federated.09gcf6j01u5cd6117koxp17kxi93' />
+          </datasources>
+          <datasource-dependencies datasource='federated.09gcf6j01u5cd6117koxp17kxi93'>
+            <column datatype='string' name='[Age Mons (group)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[Age_Mons]' new-bin='true'>
+                <bin default-name='false' value='&quot;Less than 1 year&quot;'>
+                  <value>12</value>
+                </bin>
+                <bin default-name='false' value='&quot;Less than 2 years&quot;'>
+                  <value>13</value>
+                  <value>14</value>
+                  <value>15</value>
+                  <value>16</value>
+                  <value>17</value>
+                  <value>18</value>
+                  <value>19</value>
+                  <value>20</value>
+                  <value>21</value>
+                  <value>22</value>
+                  <value>23</value>
+                  <value>24</value>
+                </bin>
+                <bin default-name='false' value='&quot;Less than 3 years&quot;'>
+                  <value>25</value>
+                  <value>26</value>
+                  <value>27</value>
+                  <value>28</value>
+                  <value>29</value>
+                  <value>30</value>
+                  <value>31</value>
+                  <value>32</value>
+                  <value>33</value>
+                  <value>34</value>
+                  <value>35</value>
+                  <value>36</value>
+                </bin>
+              </calculation>
+            </column>
+            <column caption='Age Mons' datatype='integer' name='[Age_Mons]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Class/ASD Traits]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[Class/ASD Traits]' derivation='None' name='[none:Class/ASD Traits:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[pcto:sum:Number of Records:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.09gcf6j01u5cd6117koxp17kxi93].[none:Class/ASD Traits:nk]' />
+              <text column='[federated.09gcf6j01u5cd6117koxp17kxi93].[pcto:sum:Number of Records:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#555555' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.09gcf6j01u5cd6117koxp17kxi93].[pcto:sum:Number of Records:qk]</rows>
+        <cols>[federated.09gcf6j01u5cd6117koxp17kxi93].[Age Mons (group)]</cols>
+        <mark-labels>
+          <mark-label id='0' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.09gcf6j01u5cd6117koxp17kxi93].[Age Mons (group)]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.09gcf6j01u5cd6117koxp17kxi93].[pcto:sum:Number of Records:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.09gcf6j01u5cd6117koxp17kxi93].[Age Mons (group)]</field>
+                  <field>[federated.09gcf6j01u5cd6117koxp17kxi93].[none:Class/ASD Traits:nk]</field>
+                  <field>[federated.09gcf6j01u5cd6117koxp17kxi93].[pcto:sum:Number of Records:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Less than 1 year&quot;</value>
+                <value>&quot;Yes&quot;</value>
+                <value>0.028462998102466792</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+        </mark-labels>
+      </table>
+      <simple-id uuid='{CDFA7D86-353A-45D0-AC6B-676DB76AF6C4}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Agewise categorisation for ASD - Toddlers'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.09gcf6j01u5cd6117koxp17kxi93].[none:Class/ASD Traits:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.09gcf6j01u5cd6117koxp17kxi93].[Age Mons (group)]</field>
+            <field>[federated.09gcf6j01u5cd6117koxp17kxi93].[none:Class/ASD Traits:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{A1A178EE-3E3E-45B1-B8D1-32173F076B2C}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Agewise categorisation for ASD - Toddlers' width='192'>
+      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
+      5JgNDijuMAAAAABJRU5ErkJggg==
+    </thumbnail>
+  </thumbnails>
+</workbook>
